@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo 3</title>
+</head>
+
+<body>
+    <div>
+        <h1>Exercice 3</h1>
+        <p>Refaire le premier exercice en utilisant une fonction fléchée.</p>
+    </div>
+    <div>
+        <form action="">
+            <input type="number" id="firstNumber"> x
+            <input type="number" id="secondNumber"> =
+            <input type="number" id="answer" readonly="readonly">
+            <button id="myButton" type="button">Résultat :</button>
+        </form>
+    </div>
+
+    <script>
+        let idFirstNumber = document.getElementById("firstNumber");
+        let idSecondNumber = document.getElementById("secondNumber");
+        let idAnswer = document.getElementById("answer");
+        let idButton = document.getElementById("myButton");
+
+        idButton.addEventListener("click", numMultiplication => {
+            idAnswer.value = (idFirstNumber.value * idSecondNumber.value).toString();
+        })
+    </script>
+</body>
+
+</html>

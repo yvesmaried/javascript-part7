@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo 1</title>
+</head>
+
+<body>
+    <div>
+        <h1>Exercice 1</h1>
+        <p>Écrire une fonction qui prend 2 nombres en paramètres et qui retourne le résultat de leur multiplication.</p>
+        <p>Créer un formulaire permettant d'entrer deux nombres. Au clic sur un bouton, lancer votre fonction.</p>
+    </div>
+    <div>
+        <form action="">
+            <input type="text" id="firstNumber"> x
+            <input type="text" id="secondNumber"> =
+            <input type="text" id="answer" readonly>
+            <button id="myButton" type="button">Résultat :</button>
+        </form>
+    </div>
+
+    <script>
+        let idFirstNumber = document.getElementById("firstNumber");
+        let idSecondNumber = document.getElementById("secondNumber");
+        let idAnswer = document.getElementById("answer");
+        let idButton = document.getElementById("myButton");
+
+        function numMultiplication(nb1, nb2) {
+            return idAnswer.value = (nb1 * nb2);
+        };
+        idButton.addEventListener("click", function () {
+            numMultiplication(idFirstNumber.value, idSecondNumber.value)
+        });
+    </script>
+</body>
+
+</html>
